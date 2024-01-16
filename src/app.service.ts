@@ -7,7 +7,10 @@ export class AppService {
 
   async getHello() {
     const result = await this.gptService.generateText([
-      { content: 'Hello, what is your name?', role: 'user' },
+      {
+        content: '인천에서 가장 가까운 식당을 골라줘, 짧게 단어로 알려줘',
+        role: 'user',
+      },
     ]);
     return result;
   }
